@@ -4747,5 +4747,29 @@
         "b"
       ]
     }
+  },
+  {
+    "id": "case-045",
+    "title": "Python dict repr with single quotes, Python literals, and trailing comma",
+    "input": "{'status': 'ok', 'retry': True, 'error': None, 'attempts': 2,}",
+    "schema": null,
+    "expected_actions_include": [
+      "converted_single_quotes",
+      "replaced_python_literal",
+      "removed_trailing_comma"
+    ],
+    "tags": [
+      "python-repr",
+      "single-quotes",
+      "trailing-comma"
+    ],
+    "provenance": "synthetic-representative",
+    "notes": "Python dict repr emitted by an LLM instead of strict JSON must convert single quotes, True/None literals, and trailing comma.",
+    "expected": {
+      "status": "ok",
+      "retry": true,
+      "error": null,
+      "attempts": 2
+    }
   }
 ]
