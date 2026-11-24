@@ -4771,5 +4771,27 @@
       "error": null,
       "attempts": 2
     }
+  },
+  {
+    "id": "case-046",
+    "title": "Unicode escapes survive trailing-comma repair",
+    "input": "{\"greeting\": \"\\u4f60\\u597d\", \"emoji\": \"\\ud83d\\ude80\", \"literal\": \"\\\\u4f60\",}",
+    "schema": null,
+    "expected_actions_include": [
+      "removed_trailing_comma"
+    ],
+    "tags": [
+      "unicode",
+      "string-escape",
+      "surrogate-pair",
+      "trailing-comma"
+    ],
+    "provenance": "synthetic-representative",
+    "notes": "Removing the trailing comma must preserve BMP Unicode escapes, decode a surrogate pair as one emoji, and leave an escaped backslash followed by u4f60 as literal text rather than decoding it twice.",
+    "expected": {
+      "greeting": "你好",
+      "emoji": "🚀",
+      "literal": "\\u4f60"
+    }
   }
 ]
