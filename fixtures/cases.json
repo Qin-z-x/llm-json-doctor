@@ -4747,5 +4747,35 @@
         "b"
       ]
     }
+  },
+  {
+    "id": "case-047",
+    "title": "Quoted exponent in number and string fields",
+    "input": "{\"rate\": \"1e3\", \"label\": \"1e3\"}",
+    "schema": {
+      "type": "object",
+      "properties": {
+        "rate": {
+          "type": "number"
+        },
+        "label": {
+          "type": "string"
+        }
+      }
+    },
+    "expected_actions_include": [
+      "coerced_string_to_number"
+    ],
+    "tags": [
+      "schema",
+      "coercion",
+      "numeric-string"
+    ],
+    "provenance": "synthetic-representative",
+    "notes": "The model quotes a rate in scientific notation. The label has the same spelling and must stay a string.",
+    "expected": {
+      "rate": 1000,
+      "label": "1e3"
+    }
   }
 ]
