@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use llm-json-doctor in research or in a product, please cite it as below."
+title: "llm-json-doctor"
+abstract: >-
+  Deterministic, dependency-free repair and validation for malformed LLM JSON.
+  Repairs fenced or prose-wrapped output, JSON5-style syntax, truncation and
+  common model defects, logs every transformation as a machine-readable action,
+  and applies a small schema-guided validation and coercion layer. Python 3.9+,
+  standard library only, no model calls and no network at runtime.
+authors:
+  - name: "llm-json-doctor contributors"
+version: "0.1.0"
+date-released: "2026-11-24"
+license: "MIT"
+repository-code: "https://github.com/Qin-Z-x/llm-json-doctor"
+url: "https://github.com/Qin-Z-x/llm-json-doctor"
+type: software
+keywords:
+  - "JSON repair"
+  - "malformed JSON"
+  - "LLM structured output"
+  - "JSON Schema validation"
+  - "deterministic parsing"
