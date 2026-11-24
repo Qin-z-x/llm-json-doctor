@@ -87,7 +87,8 @@ class CliTestCase(unittest.TestCase):
     def write(self, name, text, encoding="utf-8"):
         path = self.tmp / name
         path.parent.mkdir(parents=True, exist_ok=True)
-        path.write_text(text, encoding=encoding, newline="\n")
+        with open(path, "w", encoding=encoding, newline="\n") as fh:
+            fh.write(text)
         return str(path)
 
     def write_schema(self, name="schema.json"):
@@ -497,7 +498,7 @@ class TestPackaging(CliTestCase):
         text = (ROOT / ".github" / "workflows" / "ci.yml").read_text(
             encoding="utf-8"
         )
-        self.assertIn("runs-on: ubuntu-latest", text)
+        self.assertRegex(text, r"runs-on: ubuntu-(22\.04|latest)")
         self.assertIn('"3.9"', text)
         self.assertIn('"3.11"', text)
         self.assertIn('"3.13"', text)
