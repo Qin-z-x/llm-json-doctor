@@ -173,3 +173,7 @@ MIT licensed. Not affiliated with any model vendor.
 
 ## 视频演示
 - B站 4:42 演示：https://www.bilibili.com/video/BV11EyozaEFf
+## 更多项目
+- 在线索引（14 个项目 + 视频）：https://qin-z-x.github.io/llm-security-toolkit/
+- LLM 安全 7 件套（XSS/工具参数/PII/RAG 投毒/SQL 注入/Agent 权限/路径穿越）：https://github.com/Qin-Z-x/llm-markdown-xss-guard 等 7 个仓库
+- B站演示合集：https://www.bilibili.com/video/BV1jH1pz4ED7
