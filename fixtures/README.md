@@ -42,10 +42,12 @@ Cases with `expected_ok: false` must omit `expected` and are expected to return
 
 ## Coverage
 
-Current corpus: 44 cases covering fences, prose extraction, single/smart quotes,
+Run `python scripts/stats.py` for current corpus counts. Coverage includes fences,
+prose extraction, single/smart quotes,
 bare keys, trailing commas (object, array, end-of-input), comments, Python
 literals, `NaN`/`Infinity`, truncation, duplicate keys, BOM, JSONL/first-value,
-unicode values, deep nesting, schema coercions, additionalProperties removal,
+unicode values and escapes (including surrogate pairs and literal backslashes),
+deep nesting, schema coercions, additionalProperties removal,
 missing required, enum/minimum failures, empty input and prose-only failures.
 
 Provenance link: these failure shapes correspond to the public
