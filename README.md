@@ -170,3 +170,6 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) and [SECURITY.md](SECURITY.md). Report
 security issues privately via GitHub's security advisory feature.
 
 MIT licensed. Not affiliated with any model vendor.
+
+## 视频演示
+- B站 4:42 演示：https://www.bilibili.com/video/BV11EyozaEFf
